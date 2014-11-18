@@ -15,9 +15,10 @@ class DataViewController: UIViewController {
     
     
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var enterNameTextFeild: UITextField!
     @IBOutlet weak var enterMessageTextFeild: UITextField!
-    @IBOutlet weak var nameLabel: UILabel!
+
     @IBOutlet weak var mailButton: UIButton!
     
 
