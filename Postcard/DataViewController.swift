@@ -17,6 +17,7 @@ class DataViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var enterNameTextFeild: UITextField!
     @IBOutlet weak var enterMessageTextFeild: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mailButton: UIButton!
     
 
@@ -37,6 +38,13 @@ class DataViewController: UIViewController {
         messageLabel.hidden = false
         messageLabel.text = enterMessageTextFeild.text
         messageLabel.textColor = UIColor.redColor()
+        
+        nameLabel.hidden = false
+        nameLabel.text = "From: " + enterNameTextFeild.text
+        nameLabel.textColor = UIColor.blueColor()
+        
+        enterNameTextFeild.text = ""
+        enterNameTextFeild.resignFirstResponder()
         
         enterMessageTextFeild.text = ""
         enterMessageTextFeild.resignFirstResponder()
