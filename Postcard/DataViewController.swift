@@ -12,6 +12,13 @@ class DataViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: AnyObject?
+    
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var enterNameTextFeild: UITextField!
+    @IBOutlet weak var enterMessageTextFeild: UITextField!
+    @IBOutlet weak var mailButton: UIButton!
+    
 
 
     override func viewDidLoad() {
@@ -23,6 +30,21 @@ class DataViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    @IBAction func sendMailButtonPressed(sender: UIButton) {
+        messageLabel.hidden = false
+        messageLabel.text = enterMessageTextFeild.text
+        messageLabel.textColor = UIColor.redColor()
+        
+        enterMessageTextFeild.text = ""
+        enterMessageTextFeild.resignFirstResponder()
+        
+        mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
+        
+    }
+    
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
